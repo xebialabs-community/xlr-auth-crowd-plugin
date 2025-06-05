@@ -1,2 +1,18 @@
-rootProject.name = 'xlr-auth-crowd-plugin'
+pluginManagement {
+  repositories {
+    gradlePluginPortal()
+    ["releases"].each { r ->
+      maven {
+        name = r
+        credentials {
+          username =  nexusUserName
+          password = nexusPassword
+        }
+        url = "${nexusBaseUrl}/repositories/${r}"
+      }
+    }
+    mavenLocal()
+  }
+}
 
+rootProject.name = 'xlr-auth-crowd-plugin'

@@ -1,19 +1,103 @@
+buildscript {
+  dependencies {
+    classpath "gradle.plugin.com.xebialabs:gradle-xl-dependency-plugin:3.0.6"
+  }
+}
+
 plugins {
-    id 'java'
+  id "com.github.hierynomus.license" version "$licensePluginVersion"
+  id "java"
+  id "maven-publish"
+  id "pl.allegro.tech.build.axion-release" version "$axionReleasePluginVersion"
+}
+
+scmVersion {
+  tag {
+    prefix = 'v'
+  }
+  ignoreUncommittedChanges = true
 }
 
 group = 'com.xebialabs.xlrelease.plugins'
-version = '1.0-SNAPSHOT'
+version = scmVersion.version
+
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(17)
+    vendor = JvmVendorSpec.ADOPTIUM
+  }
+  sourceCompatibility = JavaVersion.VERSION_17
+  targetCompatibility = JavaVersion.VERSION_17
+}
+
+apply plugin: 'com.xebialabs.dependency'
 
 repositories {
-    mavenCentral()
+  mavenLocal()
+  mavenCentral()
+  maven {
+    url "https://packages.atlassian.com/mvn/maven-atlassian-external"
+  }
+  ["releases"].each { r ->
+    maven {
+      credentials {
+        username nexusUserName
+        password nexusPassword
+      }
+      url "${nexusBaseUrl}/repositories/${r}"
+    }
+  }
+}
+
+dependencyManagement {
+  importConf dependency: "com.xebialabs.xl-platform:xl-reference:${xlPlatformVersion}"
+  importConf rootProject.file('gradle/dependencies.conf')
+  useJavaPlatform true
+}
+
+// Custom configuration to isolate dependencies to be exploded
+configurations {
+  explodeDependency {
+    canBeResolved = true
+    canBeConsumed = false
+    transitive = false
+  }
+
+  implementation.extendsFrom(explodeDependency) // Allow normal usage
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+  // Only explode dependency needed which are not bundled with release
+  explodeDependency("com.atlassian.crowd:crowd-integration-client-rest:$crowdIntegrationVersion")
+  explodeDependency("com.atlassian.crowd:crowd-integration-client-common:$crowdIntegrationVersion")
+  explodeDependency("com.atlassian.crowd:crowd-integration-api:$crowdIntegrationVersion")
+  explodeDependency("com.atlassian.crowd:embedded-crowd-api:$crowdIntegrationVersion")
+  explodeDependency("com.atlassian.security:atlassian-secure-xml:$crowdSecureXmlVersion")
+  explodeDependency("org.apache.httpcomponents:httpclient-cache:$httpClient4Version")
+
+  // provided dependency with release
+  implementation("com.google.guava:guava")
+  implementation("org.slf4j:slf4j-api")
+  implementation("com.fasterxml.jackson.core:jackson-databind")
+  implementation("org.springframework.security:spring-security-core")
+  implementation("org.springframework.security:spring-security-web")
+  implementation("org.springframework:spring-tx")
+  implementation("com.xebialabs.xlrelease:xlr-server:$xlReleaseVersion") {
+    transitive = false
+  }
 }
 
-test {
-    useJUnitPlatform()
+// Modify the JAR task to include only exploded classes, excluding META-INF
+tasks.jar {
+  from {
+    configurations.explodeDependency.collect { zipTree(it).matching { exclude "META-INF/**" } } // Exclude META-INF
+  }
+}
+
+license {
+  header = rootProject.file("License.md")
+  strictCheck = false
+  exclude "**/*.json"
+  ext.year = Calendar.getInstance().get(Calendar.YEAR)
+  ext.name = "DIGITAL.AI"
 }

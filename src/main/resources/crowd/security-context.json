@@ -1,0 +1,240 @@
+{
+  "@class": "org.springframework.security.core.context.SecurityContextImpl",
+  "authentication": {
+    "@class": "org.springframework.security.authentication.UsernamePasswordAuthenticationToken",
+    "authorities": [
+      "java.util.Collections$UnmodifiableRandomAccessList",
+      [
+        {
+          "@class": "org.springframework.security.core.authority.SimpleGrantedAuthority",
+          "authority": "Group"
+        }
+      ]
+    ],
+    "details": {
+      "@class": "org.springframework.security.web.authentication.WebAuthenticationDetails",
+      "remoteAddress": "192.168.178.59",
+      "sessionId": "66315bd6-0ac4-4213-959f-c34b6c819e37"
+    },
+    "authenticated": true,
+    "principal": {
+      "@class": "com.xebialabs.xlrelease.plugins.security.crowd.userdetails.CrowdUserDetails",
+      "principal": {
+        "@class": "com.atlassian.crowd.integration.rest.entity.UserEntity",
+        "name": "bnechyporenko",
+        "firstName": "B",
+        "lastName": "N",
+        "displayName": "B N",
+        "emailAddress": "bnechyporenko@xebialabs.com",
+        "password": {
+          "@class": "com.atlassian.crowd.integration.rest.entity.PasswordEntity",
+          "value": null
+        },
+        "encryptedPassword": null,
+        "active": true,
+        "createdDate": [
+          "java.util.Date",
+          1585633530708
+        ],
+        "updatedDate": [
+          "java.util.Date",
+          1585635599069
+        ],
+        "key": "557057:863fbb21-749e-4d3d-8c2f-7c15629551fa",
+        "attributes": {
+          "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntityList",
+          "attributes": [
+            "java.util.ArrayList",
+            [
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "autoGroupsAdded",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "true"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "autoGroupsAdded.app.720897",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "true"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "invalidPasswordAttempts",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "0"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "lastActive",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "1586153551529"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "lastAuthenticated",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "1586153551525"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "passwordLastChanged",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "1585635599072"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "requiresPasswordChange",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "false"
+                  ]
+                ]
+              }
+            ]
+          ],
+          "empty": false
+        },
+        "empty": false
+      },
+      "authorities": [
+        "java.util.ArrayList",
+        [
+          {
+            "@class": "org.springframework.security.core.authority.SimpleGrantedAuthority",
+            "authority": "Group"
+          }
+        ]
+      ],
+      "attributes": {
+        "@class": "com.atlassian.crowd.integration.rest.entity.UserEntity",
+        "name": "bnechyporenko",
+        "firstName": "B",
+        "lastName": "N",
+        "displayName": "B N",
+        "emailAddress": "bnechyporenko@xebialabs.com",
+        "password": {
+          "@class": "com.atlassian.crowd.integration.rest.entity.PasswordEntity",
+          "value": null
+        },
+        "encryptedPassword": null,
+        "active": true,
+        "createdDate": [
+          "java.util.Date",
+          1585633530708
+        ],
+        "updatedDate": [
+          "java.util.Date",
+          1585635599069
+        ],
+        "key": "557057:863fbb21-749e-4d3d-8c2f-7c15629551fa",
+        "attributes": {
+          "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntityList",
+          "attributes": [
+            "java.util.ArrayList",
+            [
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "autoGroupsAdded",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "true"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "autoGroupsAdded.app.720897",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "true"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "invalidPasswordAttempts",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "0"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "lastActive",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "1586153551529"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "lastAuthenticated",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "1586153551525"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "passwordLastChanged",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "1585635599072"
+                  ]
+                ]
+              },
+              {
+                "@class": "com.atlassian.crowd.integration.rest.entity.MultiValuedAttributeEntity",
+                "name": "requiresPasswordChange",
+                "values": [
+                  "java.util.ArrayList",
+                  [
+                    "false"
+                  ]
+                ]
+              }
+            ]
+          ],
+          "empty": false
+        },
+        "empty": false
+      }
+    },
+    "credentials": null
+  }
+}

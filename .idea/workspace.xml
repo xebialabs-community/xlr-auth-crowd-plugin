@@ -4,11 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a228e0a-95ea-4fe5-b76e-95546bef492d" name="Changes" comment="" />
+    <list default="true" id="4a228e0a-95ea-4fe5-b76e-95546bef492d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/License.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/dependencies.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/authentication/CrowdAuthenticationProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/authentication/XLCrowdAuthenticationProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/converter/CrowdDeserializingConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/converter/CrowdSerializingConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/converter/CrowdSpringSessionConverterFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/exception/CrowdDataAccessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/principaldata/CrowdPrincipalDataProviderFactoryBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/principaldata/CrowdUserDataProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/userdetails/CrowdUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/userdetails/CrowdUserDetailsMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/userdetails/CrowdUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/userdetails/CrowdUserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd/userdetails/WebAuthenticationDetailsMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/crowd/security-context.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/xl-crowd-security.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="xlr-auth-crowd-plugin" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="xlr-auth-crowd-plugin" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,15 +86,32 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build xlr-auth-crowd-plugin.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/mpatel/Documents/local-git-repo/xlr-auth-crowd-plugin/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/crowd" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/xebialabs/xlrelease/plugins/security/crowd" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -54,7 +128,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749100643756</updated>
-      <workItem from="1749100644848" duration="1000" />
+      <workItem from="1749100644848" duration="12383000" />
     </task>
     <servers />
   </component>
