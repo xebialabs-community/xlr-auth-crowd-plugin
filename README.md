@@ -45,7 +45,7 @@ For more information, see [Adding an Application](https://confluence.atlassian.c
    ```
    DAI_RELEASE_SERVER/plugins/__local__
    ```
-3. To configure Release to use an Atlassian Crowd, modify the `xl-release-security.xml` security configuration file. This following is an example `xl-release-security.xml` file:
+3. To configure Release to use an Atlassian Crowd, modify the `xl-release-security.xml` security configuration file. The following is an example `xl-release-security.xml` file:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
