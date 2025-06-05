@@ -80,11 +80,11 @@ For more information, see [Adding an Application](https://confluence.atlassian.c
 
 ### Step 3 - Add the cache configuration file to your Release directory
 
-Copy the following file into your `XL_RELEASE_SERVER_HOME/conf` directory:
+Copy the following file into your `DAI_RELEASE_SERVER/conf` directory:
 
 | Copy From                          | Copy To                                      |
 |-------------------------------------|----------------------------------------------|
-| `CROWD/client/conf/crowd-ehcache.xml` | `XL_RELEASE_SERVER_HOME/conf/crowd-ehcache.xml` |
+| `CROWD/client/conf/crowd-ehcache.xml` | `DAI_RELEASE_SERVER/conf/crowd-ehcache.xml` |
 
 This file can be adjusted to change the cache behavior.
 
@@ -92,11 +92,11 @@ This file can be adjusted to change the cache behavior.
 
 The Atlassian Crowd Spring Security connector must be configured with the details of the Atlassian Crowd server.
 
-1. Copy the default `crowd.properties` file into your `XL_RELEASE_SERVER_HOME/conf` directory:
+1. Copy the default `crowd.properties` file into your `DAI_RELEASE_SERVER/conf` directory:
 
 | Copy From                          | Copy To                                      |
 |-------------------------------------|----------------------------------------------|
-| `CROWD/client/conf/crowd.properties` | `XL_RELEASE_SERVER_HOME/conf/crowd.properties` |
+| `CROWD/client/conf/crowd.properties` | `DAI_RELEASE_SERVER/conf/crowd.properties` |
 
 2. Edit `crowd.properties` and populate the following fields appropriately:
 
